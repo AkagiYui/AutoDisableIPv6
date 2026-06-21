@@ -1,3 +1,100 @@
 <resources>
     <string name="app_name">Auto Disable IPv6</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_settings">Settings</string>
+    <string name="nav_logs">Logs</string>
+
+    <!-- Notification -->
+    <string name="notification_channel_name">Monitoring</string>
+    <string name="notification_channel_desc">Keeps watching Wi-Fi connections to disable IPv6.</string>
+    <string name="notification_title">Auto Disable IPv6</string>
+    <string name="notification_text">Monitoring Wi-Fi connections</string>
+
+    <!-- Settings: master -->
+    <string name="settings_title">Settings</string>
+    <string name="master_switch_title">Auto-disable IPv6</string>
+    <string name="master_switch_desc">Master switch for the whole feature.</string>
+
+    <!-- Settings: behavior -->
+    <string name="section_behavior">Behavior</string>
+    <string name="behavior_auto_resume_title">Resume monitoring on launch</string>
+    <string name="behavior_auto_resume_desc">Restart the monitor when you open the app.</string>
+    <string name="behavior_auto_boot_title">Start monitoring on boot</string>
+    <string name="behavior_auto_boot_desc">Begin monitoring automatically after a reboot.</string>
+    <string name="behavior_only_unlocked_title">Run only after unlock</string>
+    <string name="behavior_only_unlocked_desc">If locked when joining a target network, run once after you unlock.</string>
+    <string name="behavior_retry_title">Retry on failure</string>
+    <string name="behavior_retry_desc">Retry up to 3 times, 5s apart; cancels if the network changes.</string>
+
+    <!-- Settings: SSID rules -->
+    <string name="section_ssid">Target SSIDs</string>
+    <string name="ssid_empty">No SSID rules yet. Add one to get started.</string>
+    <string name="ssid_add">Add SSID</string>
+    <string name="ssid_add_title">Add SSID rule</string>
+    <string name="ssid_edit_title">Edit SSID rule</string>
+    <string name="ssid_rule_pattern_hint">SSID (regular expression)</string>
+    <string name="ssid_rule_label_hint">Label (optional)</string>
+    <string name="ssid_rule_enabled">Enabled</string>
+    <string name="ssid_pattern_required">Pattern cannot be empty</string>
+    <string name="ssid_pattern_invalid">Invalid regular expression</string>
+
+    <!-- Settings: tools -->
+    <string name="section_tools">Tools</string>
+    <string name="tool_test_root">Test root access</string>
+    <string name="tool_test_root_desc">Request superuser and verify it works.</string>
+    <string name="tool_battery">Disable battery optimization</string>
+    <string name="tool_battery_desc_on">Already exempt from battery optimization.</string>
+    <string name="tool_battery_desc_off">Recommended so monitoring keeps running.</string>
+
+    <!-- Settings: permissions -->
+    <string name="section_permissions">Permissions</string>
+    <string name="perm_location_title">Location permission</string>
+    <string name="perm_location_desc">Required to read the connected Wi-Fi SSID.</string>
+    <string name="perm_background_location_title">Background location</string>
+    <string name="perm_background_location_desc">Required to read the SSID while the app is closed.</string>
+    <string name="perm_notification_title">Notification permission</string>
+    <string name="perm_notification_desc">Required to show the monitoring notification.</string>
+    <string name="perm_granted">Granted</string>
+    <string name="perm_grant">Grant</string>
+
+    <!-- Common actions -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_ok">OK</string>
+    <string name="action_close">Close</string>
+
+    <!-- Root test dialog -->
+    <string name="root_test_title">Root test</string>
+    <string name="root_test_running">Testing root access…</string>
+    <string name="root_test_success">Root access granted</string>
+    <string name="root_test_failure">Root access not available</string>
+
+    <!-- Logs -->
+    <string name="logs_title">Logs</string>
+    <string name="logs_empty">No logs yet.</string>
+    <string name="logs_clear">Clear logs</string>
+    <string name="logs_clear_confirm_title">Clear all logs?</string>
+    <string name="logs_clear_confirm_message">This permanently deletes the log history.</string>
+    <string name="log_type_trigger">TRIGGER</string>
+    <string name="log_type_execute">EXECUTE</string>
+    <string name="log_type_success">SUCCESS</string>
+    <string name="log_type_failure">FAILURE</string>
+    <string name="log_type_info">INFO</string>
+
+    <!-- Log messages emitted at runtime -->
+    <string name="log_monitor_started">Monitoring started</string>
+    <string name="log_triggered">Connected to target network (rule: %1$s)</string>
+    <string name="log_executing">Running root command</string>
+    <string name="log_success">IPv6 disabled successfully</string>
+    <string name="log_failure">Command failed (exit code %1$d)</string>
+    <string name="log_deferred_unlock">Screen locked — deferring until unlock</string>
+    <string name="log_unlocked_run">Screen unlocked — running deferred command</string>
+    <string name="log_deferred_cancelled">Deferred run cancelled — no longer on target network</string>
+    <string name="log_retry_scheduled">Retry %1$d of %2$d scheduled in 5s</string>
+    <string name="log_retry_cancelled">Run cancelled — no longer on a target network</string>
+    <string name="log_root_test_ok">Root test succeeded</string>
+    <string name="log_root_test_fail">Root test failed</string>
 </resources>
